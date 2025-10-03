@@ -6,15 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-    height: 100dvh;
-}
-
 .category-section__menu-navigation-list-desktop,
 .popular-products-section-content,
 .own-products-section-wrapper,
 .special-package-section__content,
-.testimonials-section__content {
+.testimonials-section__content,
+html,
+body {
     scrollbar-width: none;
 }

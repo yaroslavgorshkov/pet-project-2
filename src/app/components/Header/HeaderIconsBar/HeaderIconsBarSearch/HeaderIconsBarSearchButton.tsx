@@ -1,8 +1,16 @@
 import { IconButton } from '@/core/Button/IconButton';
 
-export const HeaderIconsBarSearchButton = () => {
+type HeaderIconsBarSearchButtonProps = {
+    setIsHeaderIconsBarSearchMenuOpen: React.Dispatch<
+        React.SetStateAction<boolean>
+    >;
+};
+
+export const HeaderIconsBarSearchButton = ({
+    setIsHeaderIconsBarSearchMenuOpen,
+}: HeaderIconsBarSearchButtonProps) => {
     function handleHeaderIconsBarSearchButtonClick() {
-        // TODO: add HeaderIconsBarSearchButton click function
+        setIsHeaderIconsBarSearchMenuOpen((prev) => !prev);
     }
 
     return (

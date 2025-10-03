@@ -14,4 +14,5 @@ export type ButtonProps = {
     onClick?: () => void;
     variant: 'contained' | 'secondary';
     backgroundColor?: ButtonBackgroundColor;
+    disabled?: boolean;
 };

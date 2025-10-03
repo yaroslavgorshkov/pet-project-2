@@ -44,7 +44,8 @@ export const NavigationList = ({
     const navigationListUlClass = cn('list-none', 'p-0', 'm-0', ulClassName);
 
     return (
-        <nav className={navClassName}>
+        // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+        <nav className={navClassName} onClick={(e) => e.stopPropagation()}>
             <ul className={navigationListUlClass}>{renderList}</ul>
         </nav>
     );

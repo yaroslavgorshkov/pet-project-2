@@ -7,7 +7,7 @@ export type TestimonialsSectionDataItemDescriptionFor = 'CEO' | 'CFO' | 'COO';
 export type TestimonialsSectionDataItemNameFirstLine =
     | 'Leona Paul'
     | 'John Doe'
-    | 'Gabe Newell';
+    | 'Kyle Crane';
 export type TestimonialsSectionDataItemNameSecondLine =
     | 'CEO of Floatcom'
     | 'CFO of Floatcom'
@@ -40,7 +40,7 @@ export const testimonialsSectionData: TestimonialsSectionDataItem[] = [
         imgName: 'COO',
         alt: 'COO Image',
         descriptionFor: 'COO',
-        nameFirstLine: 'Gabe Newell',
+        nameFirstLine: 'Kyle Crane',
         nameSecondLine: 'COO of Floatcom',
     },
 ];

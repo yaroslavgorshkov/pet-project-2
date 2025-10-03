@@ -1,8 +1,14 @@
 import { IconButton } from '@/core/Button/IconButton';
 
-export const HeaderHamburgerMenuButton = () => {
+type HeaderHamburgerMenuButtonProps = {
+    setIsHeaderHamburgerMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const HeaderHamburgerMenuButton = ({
+    setIsHeaderHamburgerMenuOpen,
+}: HeaderHamburgerMenuButtonProps) => {
     const handleHeaderHamburgerMenuButtonClick = () => {
-        // TODO: add HeaderHamburgerMenuButton button click function
+        setIsHeaderHamburgerMenuOpen((prev) => !prev);
     };
 
     return (

@@ -15,6 +15,7 @@ export const Button = ({
     children,
     endIcon,
     className = '',
+    disabled,
     onClick,
 }: ButtonProps) => {
     const variantClass = getButtonVariant(variant);
@@ -56,7 +57,11 @@ export const Button = ({
     }
 
     return (
-        <ButtonBase className={combinedButtonClassName} onClick={onClick}>
+        <ButtonBase
+            className={combinedButtonClassName}
+            onClick={onClick}
+            disabled={disabled}
+        >
             {children}
         </ButtonBase>
     );

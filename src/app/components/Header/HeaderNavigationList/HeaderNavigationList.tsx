@@ -2,11 +2,16 @@ import { NavigationList } from '@/core/NavigationList/NavigationList';
 import { navigationListContent } from '@/Header/headerMockData';
 import { HeaderNavigationListItem } from '@/Header/HeaderNavigationList/HeaderNavigationListItem';
 import clsx from 'clsx';
-import { useState } from 'react';
 
-export const HeaderNavigationList = () => {
-    const [activeElementId, setActiveElementId] = useState(0);
+type HeaderNavigationListProps = {
+    activeElementId: number;
+    setActiveElementId: React.Dispatch<React.SetStateAction<number>>;
+};
 
+export const HeaderNavigationList = ({
+    activeElementId,
+    setActiveElementId,
+}: HeaderNavigationListProps) => {
     const headerNavigationListUlClass = clsx('flex', 'gap-6xl');
 
     return (
@@ -18,6 +23,7 @@ export const HeaderNavigationList = () => {
                     isHighlighted={isHighlighted}
                     id={id}
                     setActiveElementId={setActiveElementId}
+                    fontSize={'xl'}
                 />
             )}
             navigationListContent={navigationListContent}

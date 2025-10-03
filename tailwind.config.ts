@@ -104,9 +104,11 @@ export default {
                 '4xl': '600px',
             },
             maxHeight: {
+                xs: '500px',
                 sm: '700px',
             },
             height: {
+                '1': '1px',
                 'slider-sm': '4px',
                 'slider-md': '8px',
                 'slider-lg': '60px',
@@ -156,6 +158,7 @@ export default {
                 'el-xl': '40px',
                 'el-2xl': '56px',
                 'el-3xl': '96px',
+                'overlay-sm': '81px',
             },
             aspectRatio: {
                 '9/21': '0.41',
@@ -180,6 +183,7 @@ export default {
             'section-6xl': '120px',
             'section-7xl': '150px',
             'section-8xl': '286px',
+            'el-xs': '10px',
             'el-sm': '16px',
             'el-md': '20px',
             'el-lg': '24px',
@@ -202,6 +206,8 @@ export default {
             'overflow-container-md': '20px',
             'overflow-container-lg': '40px',
             'overflow-container-xl': '150px',
+            'el-sm': '10px',
+            'el-md': '16px',
         },
         contrast: {
             md: '0.8',
@@ -211,6 +217,11 @@ export default {
         },
         flexShrink: {
             none: '0',
+        },
+        flexGrow: {
+            2: '2',
+            4: '4',
+            6: '6',
         },
     },
     plugins: [require('@designbycode/tailwindcss-text-shadow')],
