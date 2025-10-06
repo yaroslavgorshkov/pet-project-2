@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { Button } from '@/core/Button/Button';
 import { Text } from '@/core/Text/Text';
-import { cn } from '@/helpers/cn';
 import axios from 'axios';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
@@ -22,8 +21,6 @@ export const HeaderIconsBarAccountForm = () => {
     const emailValue = watch('email');
 
     const isSubmitButtonDisabled = !(!!phoneNumberValue || !!emailValue);
-
-    const submitButtonClassName = cn('disabled:opacity-20');
 
     const handleHeaderIconsBarAccountFormSubmit: SubmitHandler<
         HeaderIconsBarAccountFormData
@@ -131,7 +128,7 @@ export const HeaderIconsBarAccountForm = () => {
                 backgroundColor="mint"
                 borderRadius="md"
                 buttonSize="sm"
-                className={submitButtonClassName}
+                className={'disabled:opacity-20'}
                 disabled={isSubmitButtonDisabled}
             >
                 <Text

@@ -11,7 +11,7 @@ export type ButtonProps = {
     children: ReactNode;
     endIcon?: EndIconType;
     className?: string;
-    onClick?: () => void;
+    onClick?: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void);
     variant: 'contained' | 'secondary';
     backgroundColor?: ButtonBackgroundColor;
     disabled?: boolean;

@@ -52,7 +52,10 @@ export type DynamicIconType =
     | 'rating'
     | 'testimonials-img'
     | 'close-icon'
-    | 'google-icon';
+    | 'google-icon'
+    | 'add-icon'
+    | 'remove-icon'
+    | 'delete-icon';
 
 export type StaticIconType =
     | 'payment-method'

@@ -32,6 +32,9 @@ import {
 import { TestimonialsImageIcon } from '../IconComponents/TestimonialsImageIcon';
 import { CloseIcon } from '../IconComponents/CloseIcon';
 import { GoogleIcon } from '../IconComponents/GoogleIcon';
+import { AddIcon } from '../IconComponents/AddIcon';
+import { RemoveIcon } from '../IconComponents/RemoveIcon';
+import { DeleteIcon } from '../IconComponents/DeleteIcon';
 
 const dynamicIconMap: Record<
     DynamicIconType,
@@ -59,6 +62,9 @@ const dynamicIconMap: Record<
     'testimonials-img': TestimonialsImageIcon,
     'close-icon': CloseIcon,
     'google-icon': GoogleIcon,
+    'add-icon': AddIcon,
+    'remove-icon': RemoveIcon,
+    'delete-icon': DeleteIcon,
 };
 
 const staticIconMap: Record<StaticIconType, () => JSX.Element> = {

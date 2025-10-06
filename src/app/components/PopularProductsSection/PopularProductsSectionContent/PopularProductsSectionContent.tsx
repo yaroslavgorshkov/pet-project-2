@@ -23,6 +23,7 @@ export const PopularProductsSectionContent = () => {
                     backgroundColor={backgroundColor}
                     alt={alt}
                     key={id}
+                    id={id}
                 />
             );
         }

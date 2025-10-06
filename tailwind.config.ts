@@ -13,6 +13,7 @@ export default {
             colors: {
                 lapis: '#07484A',
                 mint: '#70908B',
+                'light-mint': '#70908B70',
                 white: '#FDFBF8',
                 'white-blue': '#E0EFF6',
                 'darken-white': '#F0F0F0',
@@ -47,6 +48,7 @@ export default {
                 xl: '20px',
                 '2xl': '24px',
                 '3xl': '50px',
+                half: '50%',
             },
             borderWidth: {
                 sm: '1px',
@@ -60,12 +62,17 @@ export default {
                 '3xl': '382px',
             },
             maxWidth: {
+                '2xs': '114px',
+                xs: '140px',
                 sm: '194px',
                 md: '400px',
                 lg: '578px',
                 xl: '790px',
                 '2xl': '850px',
                 '3xl': '950px',
+                'section-sm': '330px',
+                'section-md': '600px',
+                '3/4': '75%',
             },
             width: {
                 'slider-sm': '4px',
@@ -75,6 +82,8 @@ export default {
                 'slider-2xl': '120px',
                 'logo-sm': '104px',
                 'logo-md': '144px',
+                'el-2xs': '20px',
+                'el-xs': '24px',
                 'el-sm': '40px',
                 'el-md': '90px',
                 'el-lg': '204px',
@@ -93,8 +102,11 @@ export default {
                 'responsive-viewport-lg': 'calc(100vw - 80px)',
                 'responsive-viewport-xl': 'calc(100vw - 300px)',
                 half: '50%',
+                'image-sm': '60px',
+                'image-md': '120px',
             },
             minHeight: {
+                xs: '120px',
                 sm: '210px',
                 md: '280px',
                 lg: '324px',
@@ -106,6 +118,7 @@ export default {
             maxHeight: {
                 xs: '500px',
                 sm: '700px',
+                'el-sm': '330px',
             },
             height: {
                 '1': '1px',
@@ -116,6 +129,7 @@ export default {
                 'slider-2xl': '580px',
                 'logo-sm': '26px',
                 'logo-md': '36px',
+                'el-xs': '20px',
                 'el-sm': '40px',
                 'el-md': '120px',
                 'el-lg': '149px',
@@ -126,6 +140,8 @@ export default {
                 'el-5xl': '556px',
                 'el-6xl': '600px',
                 'el-7xl': '640px',
+                'image-sm': '74px',
+                'image-md': '150px',
             },
             gap: {
                 sm: '10px',
@@ -183,6 +199,7 @@ export default {
             'section-6xl': '120px',
             'section-7xl': '150px',
             'section-8xl': '286px',
+            'el-2xs': '4px',
             'el-xs': '10px',
             'el-sm': '16px',
             'el-md': '20px',

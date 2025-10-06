@@ -2,7 +2,7 @@ import { IconProps } from '@/types';
 import { getIconFillColor } from '@/core/Icons/helpers/getIconFillColor';
 import { getIconSize } from '@/core/Icons/helpers/getIconSize';
 
-export const CloseIcon = ({ size, color }: IconProps) => {
+export const RemoveIcon = ({ size, color }: IconProps) => {
     const iconFillColor = getIconFillColor(color);
     const iconSize = getIconSize(size);
 
@@ -14,7 +14,7 @@ export const CloseIcon = ({ size, color }: IconProps) => {
             width={iconSize}
             fill={iconFillColor}
         >
-            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            <path d="M200-440v-80h560v80H200Z" />
         </svg>
     );
 };

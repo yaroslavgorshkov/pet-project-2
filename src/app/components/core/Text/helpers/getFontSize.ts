@@ -1,6 +1,7 @@
 import { FontSize } from '@/core/Text/textTypes';
 
 const fontSizeMap: Record<FontSize, string> = {
+    xs: 'text-[10px] leading-[12px]',
     sm: 'text-[14px] leading-[16px]',
     md: 'text-[16px] leading-[18px]',
     lg: 'text-[18px] leading-[24px]',

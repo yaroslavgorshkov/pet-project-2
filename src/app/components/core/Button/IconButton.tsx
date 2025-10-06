@@ -7,7 +7,8 @@ type IconButtonProps = {
     iconFillColor: IconFillColor;
     iconSize: IconSize;
     className?: string;
-    onClick?: () => void;
+    onClick?: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void);
+    disabled?: boolean;
 };
 
 export const IconButton = ({
@@ -16,6 +17,7 @@ export const IconButton = ({
     iconSize,
     className = '',
     onClick,
+    disabled,
 }: IconButtonProps) => {
     const iconComponent = getDynamicIconComponent(
         iconType,
@@ -24,7 +26,7 @@ export const IconButton = ({
     );
 
     return (
-        <ButtonBase className={className} onClick={onClick}>
+        <ButtonBase disabled={disabled} className={className} onClick={onClick}>
             {iconComponent}
         </ButtonBase>
     );
