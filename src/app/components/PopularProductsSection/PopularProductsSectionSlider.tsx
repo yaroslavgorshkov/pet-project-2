@@ -1,44 +1,50 @@
 import { IconButton } from '@/core/Button/IconButton';
 
-export const PopularProductsSectionSlider = () => {
-    const handlePopularProductsSectionSliderArrowButtonClick = () => {
-        // TODO: add PopularProductsSectionSliderArrowButton click function
-    };
+type PopularProductsSectionSliderProps = {
+    trackRef: React.RefObject<HTMLDivElement | null>;
+    thumbRef: React.RefObject<HTMLDivElement | null>;
+    handleArrowRightButtonClick: (() => void) | undefined;
+    handleArrowLeftButtonClick: (() => void) | undefined;
+};
 
+export const PopularProductsSectionSlider = ({
+    thumbRef,
+    trackRef,
+    handleArrowLeftButtonClick,
+    handleArrowRightButtonClick,
+}: PopularProductsSectionSliderProps) => {
     return (
-        <>
-            <div className="relative w-full flex justify-center xl:hidden">
-                <div className="w-responsive-xl h-slider-sm bg-lapis md:w-responsive-lg lg:w-responsive-md" />
-                <div className="absolute top-slider left-el-md w-slider-xl h-slider-md bg-mint md:w-slider-2xl md:left-el-lg lg:left-el-xl" />
+        <div className="flex flex-col gap-md w-full xl:w-responsive-sm">
+            <div className="relative w-full flex justify-center">
+                <div
+                    ref={trackRef}
+                    className="w-responsive-xl h-slider-sm bg-lapis md:w-responsive-lg lg:w-responsive-md xl:w-full"
+                />
+                <div
+                    ref={thumbRef}
+                    className="absolute top-slider left-el-md w-slider-xl h-slider-md bg-mint md:w-slider-2xl md:left-el-lg lg:left-el-xl xl:left-0"
+                />
             </div>
-            <div className="hidden xl:flex w-responsive-sm flex-col gap-md">
-                <div className="relative w-full flex justify-center">
-                    <div className="w-full h-slider-sm bg-lapis" />
-                    <div className="absolute top-slider left-0 w-slider-xl h-slider-md bg-mint" />
+            <div className="self-end hidden xl:flex gap-lg">
+                <div className="rounded-xl bg-white-blue w-el-sm h-el-sm">
+                    <IconButton
+                        iconType={'arrow-left'}
+                        iconFillColor={'lapis'}
+                        iconSize={'sm'}
+                        onClick={handleArrowLeftButtonClick}
+                        className="flex justify-center items-center h-full w-full"
+                    />
                 </div>
-                <div className="self-end flex gap-lg">
-                    <div className="rounded-xl bg-white-blue w-el-sm h-el-sm flex items-center justify-center">
-                        <IconButton
-                            iconType={'arrow-left'}
-                            iconFillColor={'lapis'}
-                            iconSize={'sm'}
-                            onClick={
-                                handlePopularProductsSectionSliderArrowButtonClick
-                            }
-                        />
-                    </div>
-                    <div className="rounded-xl bg-rose w-el-sm h-el-sm flex items-center justify-center">
-                        <IconButton
-                            iconType={'arrow-right'}
-                            iconFillColor={'lapis'}
-                            iconSize={'sm'}
-                            onClick={
-                                handlePopularProductsSectionSliderArrowButtonClick
-                            }
-                        />
-                    </div>
+                <div className="rounded-xl bg-rose w-el-sm h-el-sm">
+                    <IconButton
+                        iconType={'arrow-right'}
+                        iconFillColor={'lapis'}
+                        iconSize={'sm'}
+                        onClick={handleArrowRightButtonClick}
+                        className="flex justify-center items-center h-full w-full"
+                    />
                 </div>
             </div>
-        </>
+        </div>
     );
 };

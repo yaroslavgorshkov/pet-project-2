@@ -17,7 +17,7 @@ export const OwnProductsSectionContent = () => {
     );
 
     return (
-        <div className="flex gap-xl items-center">
+        <div className="flex gap-xl items-center flex-none">
             <OwnProductsSectionContentItemHighlighted
                 href={'#own-living-room'}
                 imgSrc={'/img/own-prod-4.jpg'}

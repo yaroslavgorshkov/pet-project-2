@@ -1,8 +1,16 @@
 import { IconButton } from '@/core/Button/IconButton';
 
-export const CategorySectionMenuHamburgerButton = () => {
+type CategorySectionMenuHamburgerButtonProps = {
+    setIsCategorySectionMenuHamburgerMenuOpen: React.Dispatch<
+        React.SetStateAction<boolean>
+    >;
+};
+
+export const CategorySectionMenuHamburgerButton = ({
+    setIsCategorySectionMenuHamburgerMenuOpen,
+}: CategorySectionMenuHamburgerButtonProps) => {
     const handleCategorySectionMenuHamburgerButtonClick = () => {
-        // TODO: add CategorySectionMenuHamburgerButton click function
+        setIsCategorySectionMenuHamburgerMenuOpen((prev) => !prev);
     };
 
     return (

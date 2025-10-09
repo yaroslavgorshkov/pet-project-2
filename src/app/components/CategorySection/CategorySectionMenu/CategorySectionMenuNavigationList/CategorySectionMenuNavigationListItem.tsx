@@ -1,4 +1,5 @@
 import { Text } from '@/core/Text/Text';
+import { FontSize } from '@/core/Text/textTypes';
 import clsx from 'clsx';
 
 type CategorySectionMenuNavigationListItem = {
@@ -7,6 +8,7 @@ type CategorySectionMenuNavigationListItem = {
     href: string;
     isHighlighted: boolean;
     setActiveElementId: (id: number) => void;
+    fontSize?: FontSize;
 };
 
 export const CategorySectionMenuNavigationListItem = ({
@@ -15,6 +17,7 @@ export const CategorySectionMenuNavigationListItem = ({
     id,
     isHighlighted,
     setActiveElementId,
+    fontSize = '3xl',
 }: CategorySectionMenuNavigationListItem) => {
     const handleCategorySectionMenuNavigationListItemClick = () => {
         setActiveElementId(id);
@@ -47,7 +50,7 @@ export const CategorySectionMenuNavigationListItem = ({
                 onClick={handleCategorySectionMenuNavigationListItemClick}
             >
                 <Text
-                    fontSize="3xl"
+                    fontSize={fontSize}
                     fontFamily="roboto"
                     color="lapis"
                     content={text}

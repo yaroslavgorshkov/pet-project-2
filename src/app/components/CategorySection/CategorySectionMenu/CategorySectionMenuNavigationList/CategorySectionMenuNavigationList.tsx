@@ -4,9 +4,19 @@ import { CategorySectionMenuNavigationListSlider } from '@/CategorySection/Categ
 import { NavigationList } from '@/core/NavigationList/NavigationList';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { useSlider } from '@/helpers/useSlider';
 
 export const CategorySectionMenuNavigationList = () => {
     const [activeElementId, setActiveElementId] = useState(0);
+
+    const {
+        handleScroll,
+        scrollElementRef,
+        thumbRef,
+        trackRef,
+        handleArrowDownButtonClick,
+        handleArrowUpButtonClick,
+    } = useSlider<HTMLUListElement>('vertical');
 
     const categorySectionMenuNavigationListUlClassNameSm = clsx(
         'flex',
@@ -49,6 +59,8 @@ export const CategorySectionMenuNavigationList = () => {
             </div>
             <div className="hidden w-full xl:flex">
                 <NavigationList
+                    onScroll={handleScroll}
+                    ref={scrollElementRef}
                     renderListItem={({ id, href, text, isHighlighted }) => (
                         <CategorySectionMenuNavigationListItem
                             text={text}
@@ -67,7 +79,12 @@ export const CategorySectionMenuNavigationList = () => {
                     }
                     highlightedElementId={activeElementId}
                 />
-                <CategorySectionMenuNavigationListSlider />
+                <CategorySectionMenuNavigationListSlider
+                    trackRef={trackRef}
+                    thumbRef={thumbRef}
+                    handleArrowDownButtonClick={handleArrowDownButtonClick}
+                    handleArrowUpButtonClick={handleArrowUpButtonClick}
+                />
             </div>
         </>
     );

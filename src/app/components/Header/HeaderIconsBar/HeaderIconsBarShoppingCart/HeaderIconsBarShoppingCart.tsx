@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { IconButton } from '@/core/Button/IconButton';
 import { AnimatePresence, motion } from 'framer-motion';
-import React from 'react';
 import { useEffect } from 'react';
 import { useCartStore } from './shoppingCartStore';
 import { HeaderIconsBarShoppingCartItem } from './HeaderIconsBarShoppingCartItem';
@@ -46,7 +45,7 @@ export const HeaderIconsBarShoppingCart = ({
         handleHeaderIconsBarShoppingCartBackgroundClick();
     };
 
-    const { clearCart, getTotalSum, items } = useCartStore();
+    const { clearCart, getTotalSum, items, hasHydrated } = useCartStore();
 
     const totalSumText = `${getTotalSum()}$`;
 
@@ -86,6 +85,10 @@ export const HeaderIconsBarShoppingCart = ({
         className: 'disabled:opacity-20',
         disabled: isProceedAndClearCartButtonDisabled,
     };
+
+    if (!hasHydrated) {
+        return null;
+    }
 
     return createPortal(
         <motion.div

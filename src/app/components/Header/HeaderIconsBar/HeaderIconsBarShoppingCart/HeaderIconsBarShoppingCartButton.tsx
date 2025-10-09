@@ -15,8 +15,10 @@ export const HeaderIconsBarShoppingCartButton = ({
         setIsHeaderIconsBarShoppingCartOpen((prev) => !prev);
     };
 
-    const { getAllProductsQuantity } = useCartStore();
-    const allProductsQuantity = getAllProductsQuantity().toString();
+    const { getAllProductsQuantity, hasHydrated } = useCartStore();
+    const allProductsQuantity = hasHydrated
+        ? getAllProductsQuantity().toString()
+        : '0';
 
     return (
         <div className="relative">

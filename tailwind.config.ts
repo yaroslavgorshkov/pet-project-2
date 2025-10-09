@@ -116,6 +116,7 @@ export default {
                 '4xl': '600px',
             },
             maxHeight: {
+                '2xs': '320px',
                 xs: '500px',
                 sm: '700px',
                 'el-sm': '330px',

@@ -22,12 +22,16 @@ type CartStore = {
     getItemTotalPrice: (id: string) => number;
     deleteFromCart: (id: string) => void;
     getAllProductsQuantity: () => number;
+    hasHydrated: boolean;
+    setHasHydrated: (state: boolean) => void;
 };
 
 export const useCartStore = create<CartStore>()(
     persist(
         (set, get) => ({
             items: [],
+            hasHydrated: false,
+            setHasHydrated: (state) => set({ hasHydrated: state }),
             addToCart: (newItem) => {
                 set((state) => {
                     const isItemAlreadyExist = state.items.find(
@@ -102,6 +106,9 @@ export const useCartStore = create<CartStore>()(
         {
             name: 'cart-storage',
             partialize: (state) => ({ items: state.items }),
+            onRehydrateStorage: () => (state) => {
+                state?.setHasHydrated(true);
+            },
         }
     )
 );
