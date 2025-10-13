@@ -29,7 +29,12 @@ import {
     IconSize,
     StaticIconType,
 } from '@/types';
-import { TestimonialsImageIcon } from '../IconComponents/TestimonialsImageIcon';
+import { TestimonialsImageIcon } from '@/core/Icons/IconComponents/TestimonialsImageIcon';
+import { CloseIcon } from '@/core/Icons/IconComponents/CloseIcon';
+import { GoogleIcon } from '@/core/Icons/IconComponents/GoogleIcon';
+import { AddIcon } from '@/core/Icons/IconComponents/AddIcon';
+import { RemoveIcon } from '@/core/Icons/IconComponents/RemoveIcon';
+import { DeleteIcon } from '@/core/Icons/IconComponents/DeleteIcon';
 
 const dynamicIconMap: Record<
     DynamicIconType,
@@ -55,6 +60,11 @@ const dynamicIconMap: Record<
     facebook: FacebookIcon,
     rating: RatingIcon,
     'testimonials-img': TestimonialsImageIcon,
+    'close-icon': CloseIcon,
+    'google-icon': GoogleIcon,
+    'add-icon': AddIcon,
+    'remove-icon': RemoveIcon,
+    'delete-icon': DeleteIcon,
 };
 
 const staticIconMap: Record<StaticIconType, () => JSX.Element> = {

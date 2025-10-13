@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Text } from '@/core/Text/Text';
 import { Button } from '@/core/Button/Button';
+import axios from 'axios';
 
 type NewsletterSectionContentFormData = {
     email: string;
@@ -15,7 +17,18 @@ export const NewsletterSectionForm = () => {
 
     const handleNewsletterSectionContentFormSubmit: SubmitHandler<
         NewsletterSectionContentFormData
-    > = () => {};
+    > = async (formData) => {
+        try {
+            const response = axios.post('example/api', formData);
+            console.log('NewsletterSectionContentForm response:', response);
+        } catch (error) {
+            if (axios.isAxiosError(error)) {
+                console.log('API error');
+            } else {
+                console.log('Unknown error');
+            }
+        }
+    };
 
     const hasEmailError = !!errors.email;
     const emailErrorMessage = errors.email?.message;
@@ -42,8 +55,6 @@ export const NewsletterSectionForm = () => {
 
     return (
         <form
-            action="/example"
-            method="post"
             className="flex flex-col gap-2xl w-full items-center md:items-start"
             onSubmit={handleSubmit(handleNewsletterSectionContentFormSubmit)}
         >

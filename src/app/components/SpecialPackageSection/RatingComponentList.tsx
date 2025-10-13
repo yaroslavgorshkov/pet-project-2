@@ -1,7 +1,7 @@
 import { getDynamicIconComponent } from '@/core/Icons/helpers/getIconComponent';
 import { IconSize } from '@/types';
 import { Fragment } from 'react';
-import { Rating } from './SpecialPackageSectionContent/specialPackageSectionMockData';
+import { Rating } from '@/SpecialPackageSection/SpecialPackageSectionContent/specialPackageSectionMockData';
 
 type RatingComponentListProps = {
     iconSize: IconSize;

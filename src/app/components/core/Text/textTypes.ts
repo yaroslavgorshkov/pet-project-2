@@ -1,4 +1,5 @@
 export type FontSize =
+    | 'xs'
     | 'sm'
     | 'md'
     | 'lg'

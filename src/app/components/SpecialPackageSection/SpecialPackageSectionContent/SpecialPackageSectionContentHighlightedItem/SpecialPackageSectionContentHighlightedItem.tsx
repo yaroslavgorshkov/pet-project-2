@@ -19,7 +19,11 @@ export const SpecialPackageSectionContentHighlightedItem = () => {
                     price={price}
                     rating={rating}
                 />
-                <SpecialPackageSectionContentHighlightedItemButton />
+                <SpecialPackageSectionContentHighlightedItemButton
+                    alt={alt}
+                    imageSrc={imageSrc}
+                    href={href}
+                />
                 <SpecialPackageSectionContentHighlightedItemImage
                     alt={alt}
                     imageSrc={imageSrc}
@@ -75,7 +79,11 @@ export const SpecialPackageSectionContentHighlightedItem = () => {
                         />
                     </a>
                     <div className="absolute bottom-0 right-0">
-                        <SpecialPackageSectionContentHighlightedItemButton />
+                        <SpecialPackageSectionContentHighlightedItemButton
+                            alt={alt}
+                            imageSrc={imageSrc}
+                            href={href}
+                        />
                     </div>
                 </div>
             </article>

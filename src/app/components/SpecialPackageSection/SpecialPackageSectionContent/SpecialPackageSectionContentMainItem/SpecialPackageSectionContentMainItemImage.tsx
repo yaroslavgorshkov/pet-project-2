@@ -1,5 +1,8 @@
 import { IconButton } from '@/core/Button/IconButton';
 import Image from 'next/image';
+import { useState } from 'react';
+import { SpecialPackageSectionContentItemZoonOutImage } from '@/SpecialPackageSection/SpecialPackageSectionContent/SpecialPackageSectionContentItemZoonOutImage';
+import { AnimatePresence } from 'framer-motion';
 
 type SpecialPackageSectionContentMainItemImageProps = {
     alt: string;
@@ -10,6 +13,12 @@ export const SpecialPackageSectionContentMainItemImage = ({
     alt,
     imageSrc,
 }: SpecialPackageSectionContentMainItemImageProps) => {
+    const [isImageZoomOut, setIsImageZoomOut] = useState(false);
+
+    const handleSpecialSectionMainItemZoomOutButtonClick = () => {
+        setIsImageZoomOut((prev) => !prev);
+    };
+
     return (
         <>
             <div className="relative rounded-2xl h-el-xl md:hidden w-responsive-viewport-sm">
@@ -31,13 +40,23 @@ export const SpecialPackageSectionContentMainItemImage = ({
                     className="rounded-xl 2xl:rounded-md"
                     style={{ objectFit: 'cover' }}
                 />
-                <div className="flex items-center justify-center w-el-sm h-el-sm rounded-xl 2xl:rounded-md bg-lapis absolute bottom-0 right-0">
+                <div className="hidden lg:flex items-center justify-center w-el-sm h-el-sm rounded-xl 2xl:rounded-md bg-lapis absolute bottom-0 right-0">
                     <IconButton
                         iconType={'zoom-out'}
                         iconFillColor={'white'}
                         iconSize={'xl'}
+                        onClick={handleSpecialSectionMainItemZoomOutButtonClick}
                     />
                 </div>
+                <AnimatePresence>
+                    {isImageZoomOut && (
+                        <SpecialPackageSectionContentItemZoonOutImage
+                            setIsImageZoomOut={setIsImageZoomOut}
+                            imageSrc={imageSrc}
+                            alt={alt}
+                        />
+                    )}
+                </AnimatePresence>
             </div>
         </>
     );

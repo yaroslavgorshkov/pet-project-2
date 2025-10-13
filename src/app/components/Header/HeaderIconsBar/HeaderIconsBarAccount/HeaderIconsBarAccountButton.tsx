@@ -1,8 +1,16 @@
 import { IconButton } from '@/core/Button/IconButton';
 
-export const HeaderIconsBarAccountButton = () => {
+type HeaderIconsBarAccountButtonProps = {
+    setIsHeaderIconsBarAccountOpen: React.Dispatch<
+        React.SetStateAction<boolean>
+    >;
+};
+
+export const HeaderIconsBarAccountButton = ({
+    setIsHeaderIconsBarAccountOpen,
+}: HeaderIconsBarAccountButtonProps) => {
     function handleHeaderIconsBarAccountButtonClick() {
-        // TODO: add HeaderIconsBarAccountButton click function
+        setIsHeaderIconsBarAccountOpen((prev) => !prev);
     }
 
     return (

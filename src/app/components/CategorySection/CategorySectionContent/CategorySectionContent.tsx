@@ -1,12 +1,13 @@
-import { categorySectionContent } from '@/CategorySection/categorySectionMockData';
 import { CategorySectionContentItem } from '@/CategorySection/CategorySectionContent/CategorySectionContentItem/CategorySectionContentItem';
 import { CategorySectionMenu } from '@/CategorySection/CategorySectionMenu/CategorySectionMenu';
+import { useCategorySectionContentStore } from '@/CategorySection/categorySectionContentStore';
+import { CategorySectionContentFallback } from '@/CategorySection/CategorySectionContent/CategorySectionContentFallback';
 
 export const CategorySectionContent = () => {
-    const content = categorySectionContent;
+    const content = useCategorySectionContentStore((s) => s.items);
     const isCategorySectionContentEmpty = !content || content.length === 0;
     if (isCategorySectionContentEmpty) {
-        return;
+        return <CategorySectionContentFallback />;
     }
 
     const categorySectionContentList = content.map(

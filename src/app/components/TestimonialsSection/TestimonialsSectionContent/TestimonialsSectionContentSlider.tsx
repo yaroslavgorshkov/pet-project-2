@@ -2,11 +2,15 @@ import { Button } from '@/core/Button/Button';
 import { Text } from '@/core/Text/Text';
 import { EndIconType } from '@/types';
 
-export const TestimonialsSectionSlider = () => {
-    const handleTestimonialsSectionSliderButtonClick = () => {
-        //TODO: add handleTestimonialsSectionSliderButtonClick logic
-    };
+type TestimonialsSectionSliderProps = {
+    trackRef: React.RefObject<HTMLDivElement | null>;
+    thumbRef: React.RefObject<HTMLDivElement | null>;
+};
 
+export const TestimonialsSectionSlider = ({
+    thumbRef,
+    trackRef,
+}: TestimonialsSectionSliderProps) => {
     const testimonialsSectionSliderButtonEndIcon: EndIconType = {
         iconType: 'arrow-right',
         iconSize: '2xl',
@@ -14,20 +18,18 @@ export const TestimonialsSectionSlider = () => {
     };
 
     return (
-        <>
-            <div className="relative w-full md:hidden">
-                <div className="w-full h-slider-sm bg-lapis" />
-                <div className="absolute top-slider left-0 w-slider-xl h-slider-md bg-mint" />
+        <div className="flex items-center gap-11xl whitespace-nowrap w-full">
+            <div className="relative w-full">
+                <div ref={trackRef} className="w-full h-slider-sm bg-lapis" />
+                <div
+                    ref={thumbRef}
+                    className="absolute top-slider left-0 w-slider-xl md:w-slider-2xl h-slider-md bg-mint"
+                />
             </div>
-            <div className="hidden w-full md:flex items-center gap-11xl whitespace-nowrap">
-                <div className="w-full relative">
-                    <div className="w-full h-slider-sm bg-lapis" />
-                    <div className="absolute top-slider left-0 w-slider-2xl h-slider-md bg-mint" />
-                </div>
+            <a className="hidden md:block" href="/example/url">
                 <Button
                     variant={'secondary'}
                     endIcon={testimonialsSectionSliderButtonEndIcon}
-                    onClick={handleTestimonialsSectionSliderButtonClick}
                 >
                     <Text
                         fontSize={'lg'}
@@ -36,7 +38,7 @@ export const TestimonialsSectionSlider = () => {
                         content={'See all review'}
                     />
                 </Button>
-            </div>
-        </>
+            </a>
+        </div>
     );
 };

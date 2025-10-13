@@ -1,7 +1,16 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { popularProductsSectionMockData } from '@/PopularProductsSection/popularProductsSectionMockData';
 import { PopularProductsSectionContentItem } from '@/PopularProductsSection/PopularProductsSectionContent/PopularProductsSectionContentItem';
+import { forwardRef } from 'react';
 
-export const PopularProductsSectionContent = () => {
+type PopularProductsSectionContentProps = {
+    handleScroll: () => void;
+};
+
+export const PopularProductsSectionContent = forwardRef<
+    HTMLDivElement,
+    PopularProductsSectionContentProps
+>(({ handleScroll }, ref) => {
     const popularProductsList = popularProductsSectionMockData.map(
         ({
             href,
@@ -23,6 +32,7 @@ export const PopularProductsSectionContent = () => {
                     backgroundColor={backgroundColor}
                     alt={alt}
                     key={id}
+                    id={id}
                 />
             );
         }
@@ -30,10 +40,14 @@ export const PopularProductsSectionContent = () => {
 
     return (
         <div
+            onScroll={handleScroll}
+            ref={ref}
             className="popular-products-section-content flex gap-2xl overflow-x-scroll 
         w-full px-el-2xl md:px-el-3xl lg:px-el-6xl xl:px-el-11xl"
         >
             {popularProductsList}
         </div>
     );
-};
+});
+
+PopularProductsSectionContent.displayName = 'PopularProductsSectionContent';

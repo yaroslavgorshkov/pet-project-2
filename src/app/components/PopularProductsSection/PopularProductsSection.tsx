@@ -5,8 +5,18 @@ import { PopularProductsSectionHeadline } from '@/PopularProductsSection/Popular
 import { popularProductsSectionMockData } from '@/PopularProductsSection/popularProductsSectionMockData';
 import Image from 'next/image';
 import { PopularProductsSectionSlider } from '@/PopularProductsSection/PopularProductsSectionSlider';
+import { useSlider } from '@/helpers/useSlider';
 
 export const PopularProductsSection = () => {
+    const {
+        handleScroll,
+        scrollElementRef,
+        thumbRef,
+        trackRef,
+        handleArrowLeftButtonClick,
+        handleArrowRightButtonClick,
+    } = useSlider<HTMLDivElement>('horizontal');
+
     const content = popularProductsSectionMockData;
     const isPopularProductsSectionMockDataEmpty =
         !content || content.length === 0;
@@ -25,8 +35,16 @@ export const PopularProductsSection = () => {
         <section className="py-section-3xl md:py-section-5xl">
             <div className="relative flex flex-col items-center gap-10xl md:gap-12xl xl:gap-8xl">
                 <PopularProductsSectionHeadline />
-                <PopularProductsSectionContent />
-                <PopularProductsSectionSlider />
+                <PopularProductsSectionContent
+                    ref={scrollElementRef}
+                    handleScroll={handleScroll}
+                />
+                <PopularProductsSectionSlider
+                    trackRef={trackRef}
+                    thumbRef={thumbRef}
+                    handleArrowLeftButtonClick={handleArrowLeftButtonClick}
+                    handleArrowRightButtonClick={handleArrowRightButtonClick}
+                />
                 <PopularProductsSectionButton />
                 <div className="absolute top-el-3xl left-0 -z-10 md:top-el-2xl xl:top-el-sm w-el-lg md:w-el-3xl xl:w-el-5xl aspect-9/21">
                     <Image

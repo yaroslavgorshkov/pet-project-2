@@ -1,4 +1,4 @@
-import { FooterContentMainBlockItem } from './FooterContentMainBlockItem';
+import { FooterContentMainBlockItem } from '@/Footer/FooterContent/FooterContentMainBlock/FooterContentMainBlockItem';
 import {
     footerMainBlockContentHelpData,
     footerMainBlockContentLegalStuffData,

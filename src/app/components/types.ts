@@ -50,7 +50,12 @@ export type DynamicIconType =
     | 'instagram'
     | 'facebook'
     | 'rating'
-    | 'testimonials-img';
+    | 'testimonials-img'
+    | 'close-icon'
+    | 'google-icon'
+    | 'add-icon'
+    | 'remove-icon'
+    | 'delete-icon';
 
 export type StaticIconType =
     | 'payment-method'

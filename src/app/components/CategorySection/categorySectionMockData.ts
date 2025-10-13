@@ -1,6 +1,6 @@
 import { NavigationListContentItem } from '@/types';
 
-type CategorySectionItem = {
+export type CategorySectionItem = {
     id: number;
     text: string;
     href: string;

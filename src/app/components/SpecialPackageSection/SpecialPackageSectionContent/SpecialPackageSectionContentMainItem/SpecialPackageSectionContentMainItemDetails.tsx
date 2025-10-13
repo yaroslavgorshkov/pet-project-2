@@ -1,7 +1,7 @@
 import { Text } from '@/core/Text/Text';
 import { RatingComponentList } from '@/SpecialPackageSection/RatingComponentList';
 import { SpecialPackageSectionContentItemDetails } from '@/SpecialPackageSection/SpecialPackageSectionContent/SpecialPackageSectionContentItem/SpecialPackageSectionContentItemDetails';
-import { Rating } from '../specialPackageSectionMockData';
+import { Rating } from '@/SpecialPackageSection/SpecialPackageSectionContent/specialPackageSectionMockData';
 
 type SpecialPackageSectionContentMainItemDetailsProps = {
     name: string;

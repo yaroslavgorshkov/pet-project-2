@@ -1,4 +1,5 @@
 import { Text } from '@/core/Text/Text';
+import { FontSize } from '@/core/Text/textTypes';
 import { cn } from '@/helpers/cn';
 
 type HeaderNavigationListItemProps = {
@@ -7,6 +8,7 @@ type HeaderNavigationListItemProps = {
     href: string;
     isHighlighted: boolean;
     setActiveElementId: (id: number) => void;
+    fontSize: FontSize;
 };
 
 export const HeaderNavigationListItem = ({
@@ -15,6 +17,7 @@ export const HeaderNavigationListItem = ({
     href,
     isHighlighted = false,
     setActiveElementId,
+    fontSize,
 }: HeaderNavigationListItemProps) => {
     const handleHeaderNavigationListItemClick = () => {
         setActiveElementId(id);
@@ -44,7 +47,7 @@ export const HeaderNavigationListItem = ({
         <li>
             <a href={href} onClick={handleHeaderNavigationListItemClick}>
                 <Text
-                    fontSize="xl"
+                    fontSize={fontSize}
                     fontFamily="playfair"
                     color="lapis"
                     content={text}

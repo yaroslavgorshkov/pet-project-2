@@ -15,6 +15,7 @@ export const Button = ({
     children,
     endIcon,
     className = '',
+    disabled,
     onClick,
 }: ButtonProps) => {
     const variantClass = getButtonVariant(variant);
@@ -44,7 +45,11 @@ export const Button = ({
 
     if (endIcon) {
         return (
-            <ButtonBase className={combinedButtonClassName} onClick={onClick}>
+            <ButtonBase
+                className={combinedButtonClassName}
+                onClick={onClick}
+                disabled={disabled}
+            >
                 <div className="flex justify-center items-center gap-md">
                     {children}
                     <div className="flex justify-center items-center">
@@ -56,7 +61,11 @@ export const Button = ({
     }
 
     return (
-        <ButtonBase className={combinedButtonClassName} onClick={onClick}>
+        <ButtonBase
+            className={combinedButtonClassName}
+            onClick={onClick}
+            disabled={disabled}
+        >
             {children}
         </ButtonBase>
     );

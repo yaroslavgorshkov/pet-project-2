@@ -81,19 +81,14 @@ export const CategorySectionContentItem = ({
         'inset-0'
     );
 
-    const handleCategorySectionContentItemExploreButtonClick = () => {
-        //TODO: add handleCategorySectionContentItemExploreButtonClick logic
-    };
-
     return (
-        <article className="group rounded-md relative h-full min-h-sm md:min-h-md xl:h-auto">
+        <article className="group rounded-md relative min-h-sm md:min-h-md xl:h-auto max-h-2xs">
             <div className={highlightedCategorySectionContentItemTextClass}>
                 <CategorySectionContentItemText text={text} />
             </div>
             <a
                 href={href}
                 className={highlightedCategorySectionContentItemButtonClass}
-                onClick={handleCategorySectionContentItemExploreButtonClick}
             >
                 <Button {...categorySectionContentItemButtonSmProps}>
                     <Text

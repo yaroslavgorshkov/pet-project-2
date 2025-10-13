@@ -23,6 +23,6 @@ export const ownProductsSectionContentMockData: ownProductsSectionContentItem[] 
             id: 2,
             href: '#own-bathroom',
             imgSrc: '/img/own-prod-3.jpg',
-            alt: 'Own Bathromm',
+            alt: 'Own Bathroom',
         },
     ];
