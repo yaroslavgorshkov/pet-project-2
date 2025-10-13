@@ -2,7 +2,7 @@ import { CategorySectionMenuButton } from '@/CategorySection/CategorySectionMenu
 import { CategorySectionMenuHamburgerButton } from '@/CategorySection/CategorySectionMenu/CategorySectionMenuHamburgerButton';
 import { CategorySectionMenuNavigationList } from '@/CategorySection/CategorySectionMenu/CategorySectionMenuNavigationList/CategorySectionMenuNavigationList';
 import { CategorySectionMenuSearch } from '@/CategorySection/CategorySectionMenu/CategorySectionMenuSearch';
-import { CategorySectionMenuHamburgerMenu } from './CategorySectionMenuHamburgerMenu';
+import { CategorySectionMenuHamburgerMenu } from '@/CategorySection/CategorySectionMenu/CategorySectionMenuHamburgerMenu';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 

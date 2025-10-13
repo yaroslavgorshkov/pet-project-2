@@ -6,7 +6,7 @@ import { Text } from '@/core/Text/Text';
 import { createPortal } from 'react-dom';
 import { IconButton } from '@/core/Button/IconButton';
 import { useForm } from 'react-hook-form';
-import { searchData } from './searchData';
+import { searchData } from '@/Header/HeaderIconsBar/HeaderIconsBarSearch/searchData';
 
 type HeaderIconsBarSearchMenuProps = {
     setIsHeaderIconsBarSearchMenuOpen: React.Dispatch<

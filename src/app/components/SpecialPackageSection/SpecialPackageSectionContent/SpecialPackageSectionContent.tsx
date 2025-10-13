@@ -46,7 +46,7 @@ export const SpecialPackageSectionContent = () => {
     } = useSlider<HTMLDivElement>('vertical');
 
     const dataList = specialPackageSectionMockData.map(
-        ({ alt, description, id, imageSrc, name, price, rating }) => {
+        ({ alt, description, id, imageSrc, name, price, rating, href }) => {
             return (
                 <SpecialPackageSectionContentItem
                     key={id}
@@ -56,6 +56,7 @@ export const SpecialPackageSectionContent = () => {
                     alt={alt}
                     description={description}
                     rating={rating}
+                    href={href}
                 />
             );
         }

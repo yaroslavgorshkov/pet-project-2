@@ -3,21 +3,17 @@ import { ButtonProps } from '@/core/Button/buttonTypes';
 import { Text } from '@/core/Text/Text';
 import { EndIconType } from '@/types';
 
-export const SpecialPackageSectionContentItemButton = () => {
-    const handleSpecialPackageSectionContentItemButtonClick = () => {
-        // TODO: make handleSpecialPackageSectionContentItemButtonClick logic
-    };
+type SpecialPackageSectionContentItemButtonProps = {
+    href: string;
+};
 
-    const specialPackageSectionContentMainItemButtonIconSm: EndIconType = {
-        iconType: 'shopping-cart',
+export const SpecialPackageSectionContentItemButton = ({
+    href,
+}: SpecialPackageSectionContentItemButtonProps) => {
+    const specialPackageSectionContentMainItemButtonIcon: EndIconType = {
+        iconType: 'arrow-right',
         iconFillColor: 'white',
         iconSize: '2xl',
-    };
-
-    const specialPackageSectionContentMainItemButtonIconMd: EndIconType = {
-        iconType: 'see-more',
-        iconFillColor: 'lapis',
-        iconSize: 'lg',
     };
 
     const specialPackageSectionContentMainItemButtonSmProps: Omit<
@@ -28,28 +24,31 @@ export const SpecialPackageSectionContentItemButton = () => {
         variant: 'contained',
         backgroundColor: 'mint',
         borderRadius: 'md',
-        endIcon: specialPackageSectionContentMainItemButtonIconSm,
-        onClick: handleSpecialPackageSectionContentItemButtonClick,
+        endIcon: specialPackageSectionContentMainItemButtonIcon,
+    };
+
+    const specialPackageSectionContentMainItemButtonMdProps: Omit<
+        ButtonProps,
+        'children'
+    > = {
+        variant: 'secondary',
+        endIcon: specialPackageSectionContentMainItemButtonIcon,
     };
 
     return (
-        <>
+        <a href={href}>
             <div className="md:hidden">
                 <Button {...specialPackageSectionContentMainItemButtonSmProps}>
                     <Text
                         fontSize={'md'}
                         fontFamily={'opensans'}
                         color={'white'}
-                        content={'Add to cart'}
+                        content={'See details'}
                     />
                 </Button>
             </div>
             <div className="hidden md:block">
-                <Button
-                    variant={'secondary'}
-                    onClick={handleSpecialPackageSectionContentItemButtonClick}
-                    endIcon={specialPackageSectionContentMainItemButtonIconMd}
-                >
+                <Button {...specialPackageSectionContentMainItemButtonMdProps}>
                     <Text
                         fontSize={'sm'}
                         fontFamily={'opensans'}
@@ -59,6 +58,6 @@ export const SpecialPackageSectionContentItemButton = () => {
                     />
                 </Button>
             </div>
-        </>
+        </a>
     );
 };

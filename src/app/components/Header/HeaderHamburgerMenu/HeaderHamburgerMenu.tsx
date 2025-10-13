@@ -1,6 +1,6 @@
 import { NavigationList } from '@/core/NavigationList/NavigationList';
-import { navigationListContent } from '../headerMockData';
-import { HeaderNavigationListItem } from '../HeaderNavigationList/HeaderNavigationListItem';
+import { navigationListContent } from '@/Header/headerMockData';
+import { HeaderNavigationListItem } from '@/Header/HeaderNavigationList/HeaderNavigationListItem';
 import { cn } from '@/helpers/cn';
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';

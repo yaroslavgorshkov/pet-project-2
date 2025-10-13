@@ -35,10 +35,11 @@ export const specialPackageSectionMainItemMockData: SpecialPackageSectionMainIte
         rating: 5,
     };
 
-export type SpecialPackageSectionMockDataType = Omit<
-    SpecialPackageSectionHighlightedItemMockDataType,
-    'href'
-> & { id: number; description: string };
+export type SpecialPackageSectionMockDataType =
+    SpecialPackageSectionHighlightedItemMockDataType & {
+        id: number;
+        description: string;
+    };
 
 export const specialPackageSectionMockData: SpecialPackageSectionMockDataType[] =
     [
@@ -51,6 +52,7 @@ export const specialPackageSectionMockData: SpecialPackageSectionMockDataType[] 
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             rating: 4,
+            href: '#dinning-room-special-set',
         },
         {
             id: 1,
@@ -60,6 +62,7 @@ export const specialPackageSectionMockData: SpecialPackageSectionMockDataType[] 
             alt: 'Special Package Section 2 product',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            href: '#bedroom-special-set',
             rating: 3,
         },
         {
@@ -70,6 +73,7 @@ export const specialPackageSectionMockData: SpecialPackageSectionMockDataType[] 
             alt: 'Special Package Section 3 product',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            href: '#kitchen-room-special-set',
             rating: 3,
         },
         {
@@ -81,5 +85,6 @@ export const specialPackageSectionMockData: SpecialPackageSectionMockDataType[] 
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             rating: 2,
+            href: '#bathroom-special-set',
         },
     ];

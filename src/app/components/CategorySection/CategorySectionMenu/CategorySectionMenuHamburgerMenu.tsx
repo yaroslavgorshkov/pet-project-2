@@ -1,9 +1,9 @@
 import { NavigationList } from '@/core/NavigationList/NavigationList';
-import { CategorySectionMenuNavigationListItem } from './CategorySectionMenuNavigationList/CategorySectionMenuNavigationListItem';
+import { CategorySectionMenuNavigationListItem } from '@/CategorySection/CategorySectionMenu/CategorySectionMenuNavigationList/CategorySectionMenuNavigationListItem';
 import { motion } from 'framer-motion';
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
-import { categorySectionMenuNavigationListContent } from '../categorySectionMockData';
+import { categorySectionMenuNavigationListContent } from '@/CategorySection/categorySectionMockData';
 import { cn } from '@/helpers/cn';
 
 type CategorySectionMenuHamburgerMenuProps = {

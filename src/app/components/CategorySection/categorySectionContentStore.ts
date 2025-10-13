@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import {
     categorySectionContent,
     CategorySectionItem,
-} from './categorySectionMockData';
+} from '@/CategorySection/categorySectionMockData';
 
 type CartStore = {
     items: CategorySectionItem[];

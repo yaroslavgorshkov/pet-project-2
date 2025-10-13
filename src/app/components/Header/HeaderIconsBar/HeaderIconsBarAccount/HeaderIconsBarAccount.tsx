@@ -5,7 +5,7 @@ import { Text } from '@/core/Text/Text';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { HeaderIconsBarAccountForm } from './HeaderIconsBarAccountForm';
+import { HeaderIconsBarAccountForm } from '@/Header/HeaderIconsBar/HeaderIconsBarAccount/HeaderIconsBarAccountForm';
 import { Button } from '@/core/Button/Button';
 import { ButtonProps } from '@/core/Button/buttonTypes';
 import Image from 'next/image';

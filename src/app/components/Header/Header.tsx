@@ -3,7 +3,7 @@ import { HeaderIconsBar } from '@/Header/HeaderIconsBar/HeaderIconsBar';
 import { HeaderLogo } from '@/Header/HeaderLogo';
 import { HeaderHamburgerMenuButton } from '@/Header/HeaderHamburgerMenu/HeaderHamburgerMenuButton';
 import { useState } from 'react';
-import { HeaderHamburgerMenu } from './HeaderHamburgerMenu/HeaderHamburgerMenu';
+import { HeaderHamburgerMenu } from '@/Header/HeaderHamburgerMenu/HeaderHamburgerMenu';
 import { AnimatePresence } from 'framer-motion';
 
 export const Header = () => {

@@ -85,15 +85,6 @@ export const useSlider = <T extends HTMLElement>(mode: SliderModes) => {
             const trackElement = trackRef.current;
             const thumbElement = thumbRef.current;
 
-            // console.log(
-            //     'scrollElement',
-            //     scrollElement,
-            //     'trackElement',
-            //     trackElement,
-            //     'thumbElement',
-            //     thumbElement
-            // );
-
             try {
                 if (!scrollElement || !trackElement || !thumbElement)
                     throw new Error(

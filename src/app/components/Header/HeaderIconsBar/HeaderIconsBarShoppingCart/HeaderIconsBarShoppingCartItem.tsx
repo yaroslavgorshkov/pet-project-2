@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Text } from '@/core/Text/Text';
 import { IconButton } from '@/core/Button/IconButton';
-import { useCartStore } from './shoppingCartStore';
+import { useCartStore } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/shoppingCartStore';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { cn } from '@/helpers/cn';

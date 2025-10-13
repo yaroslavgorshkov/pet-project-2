@@ -1,7 +1,7 @@
 import { CategorySectionContentItem } from '@/CategorySection/CategorySectionContent/CategorySectionContentItem/CategorySectionContentItem';
 import { CategorySectionMenu } from '@/CategorySection/CategorySectionMenu/CategorySectionMenu';
-import { useCategorySectionContentStore } from '../categorySectionContentStore';
-import { CategorySectionContentFallback } from './CategorySectionContentFallback';
+import { useCategorySectionContentStore } from '@/CategorySection/categorySectionContentStore';
+import { CategorySectionContentFallback } from '@/CategorySection/CategorySectionContent/CategorySectionContentFallback';
 
 export const CategorySectionContent = () => {
     const content = useCategorySectionContentStore((s) => s.items);

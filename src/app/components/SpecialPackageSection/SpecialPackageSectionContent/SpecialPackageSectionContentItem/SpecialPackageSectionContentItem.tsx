@@ -17,6 +17,7 @@ export const SpecialPackageSectionContentItem = ({
     imageSrc,
     price,
     rating,
+    href,
 }: SpecialPackageSectionContentItemProps) => {
     const priceText = `$${price}`;
 
@@ -28,7 +29,7 @@ export const SpecialPackageSectionContentItem = ({
                     price={price}
                     rating={rating}
                 />
-                <SpecialPackageSectionContentItemButton />
+                <SpecialPackageSectionContentItemButton href={href} />
                 <SpecialPackageSectionContentItemImage
                     alt={alt}
                     imageSrc={imageSrc}
@@ -74,7 +75,7 @@ export const SpecialPackageSectionContentItem = ({
                     <SpecialPackageSectionContentItemDescription
                         description={description}
                     />
-                    <SpecialPackageSectionContentItemButton />
+                    <SpecialPackageSectionContentItemButton href={href} />
                 </div>
             </article>
         </>

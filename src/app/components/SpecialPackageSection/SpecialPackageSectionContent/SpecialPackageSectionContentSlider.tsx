@@ -26,7 +26,7 @@ export const SpecialPackageSectionContentSlider = ({
                 />
             </div>
             <div className="hidden 2xl:flex flex-col gap-lg">
-                <div className="rounded-xl bg-white-blue w-el-sm h-el-sm flex items-center justify-center">
+                <div className="rounded-xl bg-white-blue hover:bg-opacity-70 transition w-el-sm h-el-sm flex items-center justify-center">
                     <IconButton
                         iconType={'arrow-up'}
                         iconFillColor={'lapis'}
@@ -34,7 +34,7 @@ export const SpecialPackageSectionContentSlider = ({
                         onClick={handleArrowUpButtonClick}
                     />
                 </div>
-                <div className="rounded-xl bg-rose w-el-sm h-el-sm flex items-center justify-center">
+                <div className="rounded-xl bg-rose hover:bg-opacity-70 transition w-el-sm h-el-sm flex items-center justify-center">
                     <IconButton
                         iconType={'arrow-down'}
                         iconFillColor={'lapis'}

@@ -1,7 +1,7 @@
 import { IconButton } from '@/core/Button/IconButton';
 import { useRef, useState } from 'react';
-import { useCategorySectionContentStore } from '../categorySectionContentStore';
-import { categorySectionContent } from '../categorySectionMockData';
+import { useCategorySectionContentStore } from '@/CategorySection/categorySectionContentStore';
+import { categorySectionContent } from '@/CategorySection/categorySectionMockData';
 
 export const CategorySectionMenuSearch = () => {
     const [inputValue, setInputValue] = useState('');

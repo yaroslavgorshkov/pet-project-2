@@ -2,10 +2,10 @@ import { HeaderIconsBarAccountButton } from '@/Header/HeaderIconsBar/HeaderIcons
 import { HeaderIconsBarSearchButton } from '@/Header/HeaderIconsBar/HeaderIconsBarSearch/HeaderIconsBarSearchButton';
 import { HeaderIconsBarShoppingCartButton } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/HeaderIconsBarShoppingCartButton';
 import { useState } from 'react';
-import { HeaderIconsBarAccount } from './HeaderIconsBarAccount/HeaderIconsBarAccount';
+import { HeaderIconsBarAccount } from '@/Header/HeaderIconsBar/HeaderIconsBarAccount/HeaderIconsBarAccount';
 import { AnimatePresence } from 'framer-motion';
-import { HeaderIconsBarSearchMenu } from './HeaderIconsBarSearch/HeaderIconsBarSearchMenu';
-import { HeaderIconsBarShoppingCart } from './HeaderIconsBarShoppingCart/HeaderIconsBarShoppingCart';
+import { HeaderIconsBarSearchMenu } from '@/Header/HeaderIconsBar/HeaderIconsBarSearch/HeaderIconsBarSearchMenu';
+import { HeaderIconsBarShoppingCart } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/HeaderIconsBarShoppingCart';
 
 export const HeaderIconsBar = () => {
     const [isHeaderIconsBarAccountOpen, setIsHeaderIconsBarAccountOpen] =

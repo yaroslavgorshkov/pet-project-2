@@ -70,6 +70,7 @@ export default {
                 xl: '790px',
                 '2xl': '850px',
                 '3xl': '950px',
+                '4xl': '1300px',
                 'section-sm': '330px',
                 'section-md': '600px',
                 '3/4': '75%',
@@ -119,6 +120,7 @@ export default {
                 '2xs': '320px',
                 xs: '500px',
                 sm: '700px',
+                md: '1000px',
                 'el-sm': '330px',
             },
             height: {
@@ -179,6 +181,7 @@ export default {
             },
             aspectRatio: {
                 '9/21': '0.41',
+                '4/3': '1.33',
             },
         },
         screens: {

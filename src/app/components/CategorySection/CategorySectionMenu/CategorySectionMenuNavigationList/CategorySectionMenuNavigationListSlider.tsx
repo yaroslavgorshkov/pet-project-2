@@ -26,7 +26,7 @@ export const CategorySectionMenuNavigationListSlider = ({
                 />
             </div>
             <div className="flex flex-col gap-lg">
-                <div className="rounded-xl bg-white-blue w-el-sm h-el-sm">
+                <div className="rounded-xl bg-white-blue hover:bg-opacity-70 transition w-el-sm h-el-sm">
                     <IconButton
                         iconType={'arrow-up'}
                         iconFillColor={'lapis'}
@@ -35,7 +35,7 @@ export const CategorySectionMenuNavigationListSlider = ({
                         className="flex justify-center items-center h-full w-full"
                     />
                 </div>
-                <div className="rounded-xl bg-rose w-el-sm h-el-sm">
+                <div className="rounded-xl bg-rose w-el-sm hover:bg-opacity-70 transition h-el-sm">
                     <IconButton
                         iconType={'arrow-down'}
                         iconFillColor={'lapis'}

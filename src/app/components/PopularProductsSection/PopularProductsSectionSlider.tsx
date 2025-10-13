@@ -26,7 +26,7 @@ export const PopularProductsSectionSlider = ({
                 />
             </div>
             <div className="self-end hidden xl:flex gap-lg">
-                <div className="rounded-xl bg-white-blue w-el-sm h-el-sm">
+                <div className="rounded-xl bg-white-blue hover:bg-opacity-70 transition w-el-sm h-el-sm">
                     <IconButton
                         iconType={'arrow-left'}
                         iconFillColor={'lapis'}
@@ -35,7 +35,7 @@ export const PopularProductsSectionSlider = ({
                         className="flex justify-center items-center h-full w-full"
                     />
                 </div>
-                <div className="rounded-xl bg-rose w-el-sm h-el-sm">
+                <div className="rounded-xl bg-rose hover:bg-opacity-70 transition w-el-sm h-el-sm">
                     <IconButton
                         iconType={'arrow-right'}
                         iconFillColor={'lapis'}

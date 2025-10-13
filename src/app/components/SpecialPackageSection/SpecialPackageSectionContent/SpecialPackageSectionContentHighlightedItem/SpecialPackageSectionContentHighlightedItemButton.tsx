@@ -3,14 +3,29 @@ import { ButtonProps } from '@/core/Button/buttonTypes';
 import { IconButton } from '@/core/Button/IconButton';
 import { Text } from '@/core/Text/Text';
 import { EndIconType } from '@/types';
+import { AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { SpecialPackageSectionContentItemZoonOutImage } from '@/SpecialPackageSection/SpecialPackageSectionContent/SpecialPackageSectionContentItemZoonOutImage';
 
-export const SpecialPackageSectionContentHighlightedItemButton = () => {
+type SpecialPackageSectionContentHighlightedItemButton = {
+    href: string;
+    imageSrc: string;
+    alt: string;
+};
+
+export const SpecialPackageSectionContentHighlightedItemButton = ({
+    href,
+    alt,
+    imageSrc,
+}: SpecialPackageSectionContentHighlightedItemButton) => {
+    const [isImageZoomOut, setIsImageZoomOut] = useState(false);
+
     const handleSpecialPackageSectionContentItemButtonClick = () => {
-        // TODO: make handleSpecialPackageSectionContentItemButtonClick logic
+        setIsImageZoomOut((prev) => !prev);
     };
 
     const specialPackageSectionContentMainItemButtonIconSm: EndIconType = {
-        iconType: 'shopping-cart',
+        iconType: 'arrow-right',
         iconFillColor: 'white',
         iconSize: '2xl',
     };
@@ -24,28 +39,36 @@ export const SpecialPackageSectionContentHighlightedItemButton = () => {
         backgroundColor: 'mint',
         borderRadius: 'md',
         endIcon: specialPackageSectionContentMainItemButtonIconSm,
-        onClick: handleSpecialPackageSectionContentItemButtonClick,
     };
 
     return (
         <>
-            <div className="md:hidden">
+            <a href={href} className="md:hidden">
                 <Button {...specialPackageSectionContentMainItemButtonSmProps}>
                     <Text
                         fontSize={'md'}
                         fontFamily={'opensans'}
                         color={'white'}
-                        content={'Add to cart'}
+                        content={'See details'}
                     />
                 </Button>
-            </div>
-            <div className="hidden md:flex w-el-sm h-el-sm rounded-md bg-lapis justify-center items-center">
+            </a>
+            <div className="hidden lg:flex w-el-sm h-el-sm rounded-md bg-lapis justify-center items-center">
                 <IconButton
                     iconType={'zoom'}
                     iconFillColor={'white'}
                     iconSize={'xl'}
                     onClick={handleSpecialPackageSectionContentItemButtonClick}
                 />
+                <AnimatePresence>
+                    {isImageZoomOut && (
+                        <SpecialPackageSectionContentItemZoonOutImage
+                            setIsImageZoomOut={setIsImageZoomOut}
+                            imageSrc={imageSrc}
+                            alt={alt}
+                        />
+                    )}
+                </AnimatePresence>
             </div>
         </>
     );

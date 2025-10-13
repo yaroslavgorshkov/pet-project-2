@@ -1,5 +1,5 @@
 import { IconButton } from '@/core/Button/IconButton';
-import { useCartStore } from './shoppingCartStore';
+import { useCartStore } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/shoppingCartStore';
 import { Text } from '@/core/Text/Text';
 
 type HeaderIconsBarShoppingCartButtonProps = {

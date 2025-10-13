@@ -1,13 +1,24 @@
 import { Button } from '@/core/Button/Button';
 import { ButtonProps } from '@/core/Button/buttonTypes';
 import { Text } from '@/core/Text/Text';
+import { useCartStore } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/shoppingCartStore';
 import { EndIconType } from '@/types';
-import { SpecialPackageSectionContentItemButton } from '../SpecialPackageSectionContentItem/SpecialPackageSectionContentItemButton';
+import { specialPackageSectionMainItemMockData } from '@/SpecialPackageSection/SpecialPackageSectionContent/specialPackageSectionMockData';
 
 export const SpecialPackageSectionContentMainItemButton = () => {
-    const handleSpecialPackageSectionContentMainItemButtonClick = () => [
-        // TODO: make handleSpecialPackageSectionContentMainItemButtonClick logic
-    ];
+    const addToCart = useCartStore((s) => s.addToCart);
+
+    const { imageSrc, name, price } = specialPackageSectionMainItemMockData;
+
+    const handleSpecialPackageSectionContentMainItemButtonClick = () => {
+        const fullId = 'sps-mi';
+        addToCart({
+            id: fullId,
+            imgSrc: imageSrc,
+            name: name,
+            price: price,
+        });
+    };
 
     const specialPackageSectionContentMainItemButtonIconSm: EndIconType = {
         iconType: 'shopping-cart',
@@ -48,7 +59,14 @@ export const SpecialPackageSectionContentMainItemButton = () => {
     return (
         <>
             <div className="md:hidden">
-                <SpecialPackageSectionContentItemButton />
+                <Button {...specialPackageSectionContentMainItemButtonSmProps}>
+                    <Text
+                        fontSize={'md'}
+                        fontFamily={'opensans'}
+                        color={'white'}
+                        content={'Add to cart'}
+                    />
+                </Button>
             </div>
             <div className="hidden md:block 2xl:hidden">
                 <Button {...specialPackageSectionContentMainItemButtonSmProps}>

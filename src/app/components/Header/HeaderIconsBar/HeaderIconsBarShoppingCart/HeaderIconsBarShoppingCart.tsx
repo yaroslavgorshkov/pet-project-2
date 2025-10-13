@@ -3,8 +3,8 @@
 import { IconButton } from '@/core/Button/IconButton';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { useCartStore } from './shoppingCartStore';
-import { HeaderIconsBarShoppingCartItem } from './HeaderIconsBarShoppingCartItem';
+import { useCartStore } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/shoppingCartStore';
+import { HeaderIconsBarShoppingCartItem } from '@/Header/HeaderIconsBar/HeaderIconsBarShoppingCart/HeaderIconsBarShoppingCartItem';
 import { Button } from '@/core/Button/Button';
 import { Text } from '@/core/Text/Text';
 import { ButtonProps } from '@/core/Button/buttonTypes';
